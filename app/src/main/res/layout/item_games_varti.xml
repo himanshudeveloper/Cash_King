@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:id="@+id/click"
+    android:orientation="vertical"
+    android:layout_marginVertical="3dp"
+    android:layout_marginHorizontal="20dp">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_2"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher_round"
+            app:riv_corner_radius="20dp" />
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/img_2"
+            android:layout_toStartOf="@+id/play_layout"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:maxLines="1"
+                android:text="Bike race"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/regular"
+                android:maxLines="1"
+                android:text="Play and earn upto 100 coins."
+                android:textColor="#919298"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_layout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <LinearLayout
+                android:id="@+id/btn"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/grad_btn_big">
+                <TextView
+                    android:id="@+id/install_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Play"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_toStartOf="@id/imm"
+                android:layout_below="@+id/btn"
+                android:layout_width="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rupee" />
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/btn"
+                android:id="@+id/imm"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/bold"
+                android:text="@string/game_points"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"/>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/claim"
+            android:textSize="10sp"
+            android:fontFamily="@font/bold"
+            android:background="@drawable/pending_task"
+            android:textAllCaps="false"
+            android:text="Pending"
+            android:textColor="@color/white"
+            android:layout_width="60dp"
+            android:layout_height="30dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:src="@drawable/rupee"/>
+            <TextView
+                android:id="@+id/coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250 coins"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/task_num"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/task_num_back">
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bold"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/task_num"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/t_id"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Invite 5 friends"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_invited" />
+
+            <TextView
+                android:id="@+id/sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="2/5 Invited"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="100dp"
+            android:progress="60"
+            android:progressDrawable="@drawable/blue_progress" />
+
+    </LinearLayout>
+
+</RelativeLayout>

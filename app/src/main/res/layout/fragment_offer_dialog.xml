@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#BE000000"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/blur"
+    tools:context=".csm.topsheet.OfferDialog">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/offertoro_dialog_back">
+
+        <LinearLayout
+            android:paddingRight="17dp"
+            android:layout_marginTop="15dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/close"
+                app:tint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <com.makeramen.roundedimageview.RoundedImageView
+              android:id="@+id/image"
+              android:layout_width="70dp"
+              android:layout_height="70dp"
+              android:src="@mipmap/ic_launcher_round"
+              app:riv_corner_radius="30dip"
+              app:riv_border_width="2dip"
+              app:riv_border_color="@color/white"
+              app:riv_mutate_background="true"
+              app:riv_corner_radius_bottom_left="10dp"
+              app:riv_corner_radius_bottom_right="10dp"
+              app:riv_corner_radius_top_left="10dp"
+              app:riv_corner_radius_top_right="10dp"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Name here"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/captain"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/disc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register with full valid details and confirm your email address."
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:paddingHorizontal="20dp"
+                android:fontFamily="@font/bold"
+                android:layout_marginTop="5dp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/pending_task"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open"
+                android:textSize="17sp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/offer_coins_back">
+                <TextView
+                    android:id="@+id/amount"
+                    android:fontFamily="@font/bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500"/>
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/rupee"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disclaimer"
+            android:gravity="center"
+            android:textColor="#F85B5E"
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/captain"
+            android:layout_marginTop="7dp"/>
+
+
+        <TextView
+            android:id="@+id/diss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This offer rewards within 24 hours. New users only."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="25dp"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".csm.InstallActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/offerwall_card_back">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:padding="17dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/back"
+            android:fontFamily="@font/bold"
+            android:text="App Offers"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/poi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="-20dp"
+                android:layout_toStartOf="@+id/lin_points"
+                android:src="@drawable/rupee" />
+
+            <LinearLayout
+                android:id="@+id/lin_points"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/coin_back"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/banner_ad_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/appLogo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_launcher_app"
+                        app:riv_corner_radius="15sp" />
+
+                    <TextView
+                        android:id="@+id/appName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/baloo_thambi"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/btn_bg_one">
+
+                        <ImageView
+                            android:id="@+id/icons"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/rupee"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/appCoin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toRightOf="@+id/icons"
+                            android:fontFamily="@font/baloo_thambi"
+                            android:gravity="center_vertical"
+                            android:padding="1dp"
+                            android:text="100"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/up"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/instructions_icon"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/appname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/up"
+                        android:fontFamily="@font/baloo_thambi"
+                        android:text="@string/instructions"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/appDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appname"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="serif"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/installBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="15sp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/btn_bg_four"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Complete Offer"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:ignore="ButtonStyle,UnusedAttribute" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

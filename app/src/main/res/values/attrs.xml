@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Wheel">
+        <attr name="wheel_colors" format="reference"/>
+        <attr name="wheel_stroke_color" format="color"/>
+        <attr name="wheel_stroke_width" format="dimension"/>
+        <attr name="ring_stroke_width" format="dimension"/>
+        <attr name="wheel_items" format="reference"/>
+        <attr name="wheel_text_size" format="dimension"/>
+        <attr name="wheel_text_color" format="color"/>
+        <attr name="wheel_arrow_color" format="color"/>
+        <attr name="wheel_arrow_width" format="dimension"/>
+        <attr name="wheel_arrow_height" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TriangleShapeView">
+        <attr name="shape_bg_color" format="color" />
+        <attr name="shape_direction" format="enum">
+            <enum name="top_arrow" value="0" />
+            <enum name="right_arrow" value="1" />
+            <enum name="bottom_arrow" value="2" />
+            <enum name="left_arrow" value="3" />
+            <enum name="promotion_arrow" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LuckyWheelView">
+        <attr name="lkwBackgroundColor" format="color" />
+        <attr name="lkwEdgeColor" format="color" />
+        <attr name="lkwEdgeWidth" format="integer" />
+        <attr name="lkwTopTextColor" format="color" />
+        <attr name="lkwTopTextPadding" format="dimension" />
+        <attr name="lkwTopTextSize" format="dimension" />
+        <attr name="lkwSecondaryTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>
+

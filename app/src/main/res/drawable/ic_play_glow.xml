@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/shield.xml -->
+<!-- drawable/cta.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="70dp"
+    android:height="30dp"
+    android:viewportWidth="70"
+    android:viewportHeight="30"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M0 0H70V30H0V0Z"
+            />
+
+    </group>
+
+</vector>

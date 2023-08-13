@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="25dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/refer_dilog_back">
+
+            <TextView
+                android:id="@+id/top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bold"
+                android:text="INVITE CODE"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/regular"
+                android:text="Enter invite code to get refer points "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/refer"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/title"
+                android:textSize="15dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_back"
+                android:fontFamily="@font/bold"
+                android:hint="Enter referral code"
+                android:paddingHorizontal="25dp"
+                android:textColor="@color/white"
+                android:textColorHint="#66FFFFFF" />
+
+            <LinearLayout
+                android:layout_marginHorizontal="25dp"
+                android:layout_below="@id/refer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:padding="@dimen/spacing_middle"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/pending_task"
+                    android:fontFamily="@font/regular"
+                    android:text="skip"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+
+                    />
+
+                <Button
+                    android:id="@+id/claim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/claim_back"
+                    android:fontFamily="@font/regular"
+                    android:text="claim"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

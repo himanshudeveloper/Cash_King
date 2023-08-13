@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_back" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/pro_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrow_back"
+                app:tint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/prof"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pro_img"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:civ_border_color="#FDA62F"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="2.5dp" />
+
+
+                <!--  <LinearLayout
+                      android:layout_width="10dp"
+                      android:layout_height="10dp"
+                      android:background="#36256C"
+                      android:layout_below="@id/rank_shap"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginRight="35dp"
+                      android:layout_marginTop="-10"-->
+
+                <LinearLayout
+                    android:id="@+id/rank_shap"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/pro_img"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-17dp"
+                    android:layout_marginRight="02dp"
+                    android:background="@drawable/spin_rank">
+
+                    <TextView
+                        android:id="@+id/rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:text="99"
+                        android:textColor="@color/white"
+                        android:textSize="7sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Spin wheel"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Gourav"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/poi"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="-20dp"
+                android:layout_toStartOf="@+id/lin_points"
+                android:src="@drawable/rupee" />
+
+            <LinearLayout
+                android:id="@+id/lin_points"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/coin_back"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/spin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:background="@drawable/btn"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/extra_spin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:background="@drawable/extra_spin_btn"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal"
+            app:tint="@color/white" >
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/spin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="SPIN"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/spins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"
+            android:layout_toEndOf="@+id/spin_text"
+            android:layout_toRightOf="@+id/spin_text"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="loading..."
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <com.allrecipes.recipes5.luckywheel.LuckyWheelView
+                android:id="@+id/viewLuckyWheel"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:lkwBackgroundColor="#00FFFFFF"
+                app:lkwEdgeColor="@color/white"
+                app:lkwEdgeWidth="4"
+                app:lkwSecondaryTextSize="12sp"
+                app:lkwTopTextColor="@color/white"
+                app:lkwTopTextPadding="0dp"
+                app:lkwTopTextSize="15sp">
+
+            </com.allrecipes.recipes5.luckywheel.LuckyWheelView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/wheel_border" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnSpinFree"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="64dp"
+                android:text="wheel"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <Button
+                android:id="@+id/btnSpinByCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="90dp"
+                android:backgroundTint="@color/yellow_600"
+                android:text="50"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/top"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-50dp"
+        app:srcCompat="@drawable/wheel_cursor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/banner_ad_layout" />
+    </LinearLayout>
+</RelativeLayout>

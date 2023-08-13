@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <solid android:color="#5E4B97"/>
+        <corners android:radius="8dp"/>
+        <stroke android:color="#CEA5A5A5" android:width="0.6dp"/>
+    </shape>
+</item>
+
+    <item android:drawable="?actionBarItemBackground"/>
+</layer-list>

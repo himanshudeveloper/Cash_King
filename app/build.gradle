@@ -1,0 +1,252 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.allrecipes.recipes5"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 3
+        versionName "3.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            lintOptions {
+                checkReleaseBuilds false
+                // Or, if you prefer, you can continue to check for errors in release builds,
+                // but continue the build even when errors are found:
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+//    buildFeatures {
+//        viewBinding true
+//    }
+}
+
+// Maven Repositories
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    flatDir { dirs 'libs' }
+
+
+
+    maven {
+        name "Fyber's maven repo"
+        url "https://fyber.bintray.com/maven"
+    }
+    maven { url "https://jitpack.io" }
+    maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+}
+
+
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+    implementation ('com.google.firebase:firebase-auth:22.1.0')
+            {
+                exclude module: "play-services-safetynet"
+            }
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation files('libs/ayetpublisher.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation 'com.google.firebase:firebase-iid:21.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.3.2'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-appindexing:20.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "com.google.android.material:material:1.6.0"
+
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.sasank.roundedhorizontalprogress:roundedhorizontalprogress:1.0.1'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-basement:18.2.0'
+    //implementation 'com.android.support:palette-v7:29.0.3'
+    //Firebase Database
+
+    // Firebase Libraries
+    implementation 'com.google.firebase:firebase-messaging:23.2.0'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.firebase:firebase-storage:20.2.1'
+    implementation 'com.google.android.play:core:1.10.3'
+
+    // AdNetworks Libraries
+
+    // Custom AdNetworks
+
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+    implementation 'com.github.hyuwah:DraggableView:0.4.1'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+    implementation 'eu.giovannidefrancesco.sweetprefs:sweetprefs:1.0.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // MultiDex Dependency
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.wang.avi:library:2.1.3'
+
+
+    //Ad Networks
+    implementation 'com.ironsource.sdk:mediationsdk:7.2.3.1'
+    implementation 'com.startapp:inapp-sdk:4.10.12'
+    implementation 'info.hoang8f:fbutton:1.0.5'
+    implementation 'com.adcolony:sdk:4.8.0'
+    implementation('com.mopub:mopub-sdk:5.14.0@aar') {
+        transitive = true
+    }
+
+    //adget
+    implementation 'com.google.android.gms:play-services-iid:17.0.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.okio:okio:3.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+    implementation 'com.facebook.network.connectionclass:connectionclass:1.0.1'
+    implementation 'com.google.android.gms:play-services-ads:22.2.0'
+    implementation(name:'adgatemediasdk', ext:'aar')
+    implementation(name: 'OfferToroSdk-v4.7', ext: 'aar')
+    implementation(name: 'pollfish-googleplay-6.2.4', ext: 'aar')
+    implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
+
+    //ad networks
+    implementation 'com.facebook.android:audience-network-sdk:6.14.0'
+    implementation 'com.applovin:applovin-sdk:11.6.0'
+    implementation 'com.applovin.mediation:facebook-adapter:6.12.0.0'
+    implementation 'com.applovin.mediation:unityads-adapter:4.4.1.0'
+    implementation 'com.unity3d.ads:unity-ads:4.4.1'
+
+    implementation 'com.facebook.android:facebook-android-sdk:13.2.0'
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    implementation "androidx.browser:browser:1.5.0"
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+
+
+    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.android.gms:play-services-tasks:18.0.2'
+    implementation 'com.google.android.gms:play-services-appset:16.0.2'
+
+    implementation 'com.tomer:fadingtextview:2.6'
+    // Vungle SDK
+    implementation 'com.vungle:publisher-sdk-android:6.12.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+
+    implementation 'com.chartboost:chartboost-sdk:9.1.1'
+
+    implementation('com.consoliads:ca-analytics:v1.2.0')
+    implementation('com.consoliads:consoliadsplugin:13.1.9')
+    implementation('com.consoliads:loaderlibrary:v13.1.4')
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+    implementation 'in.codeshuffle.scratchcardlayout:ScratchCardLayout:1.0.8'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    // Unity Ads
+    //implementation(name: 'unity-ads', ext: 'aar')
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+
+    // Add Facebook Network
+    implementation 'androidx.annotation:annotation:1.6.0'
+
+    // Admob with Meta
+    implementation 'com.google.ads.mediation:facebook:6.14.0.0'
+
+    //paper db
+    implementation 'io.github.pilgr:paperdb:2.7.2'
+    ///
+
+    // Lottie Animation
+    implementation "com.airbnb.android:lottie:6.0.0"
+
+    // Image Slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+
+    def lifecycle_versions = "2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_versions"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_versions"
+
+    def room_version = "2.5.2"
+
+    implementation("androidx.room:room-runtime:2.5.2")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+    // get extension
+    implementation 'commons-io:commons-io:2.11.0'
+}
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'applovin-quality-service'
+applovin {
+    apiKey "1lxvpm5JUdkoWMDKZJhnWLTBPuZ6KpXWJWVHhINiRqOOxs9TZe3c2Is6bdLcPhOfTtcC4uGJhRqUUeN4bakQxh"
+}
+
+configurations.implementation {
+    exclude group: 'com.consoliads', module: 'loaderlibrary'
+}

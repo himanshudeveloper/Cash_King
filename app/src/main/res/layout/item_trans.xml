@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/home_btn"
+    android:layout_height="65dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/rupee" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="17dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/img1"
+                android:fontFamily="@font/regular"
+                android:text="Spin &amp; Win rewards"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="#94FFFFFF"
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:fontFamily="@font/regular"
+                android:text="22-22-2022" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

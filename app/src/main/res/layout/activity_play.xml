@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    tools:context=".csm.PlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cut"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:padding="10dp"
+            android:src="@drawable/close"
+            app:tint="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/top1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:text="Insufficient Playtime !"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <RelativeLayout
+                android:id="@+id/pro_holder"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/top1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/progress_border" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7.5dp"
+                    android:src="@mipmap/ic_launcher_round" />
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/PBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    app:cpb_background_progressbar_color="#F8DFCC"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progress="60"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="#FA9C64"
+                    app:cpb_progressbar_width="5dp"
+                    app:cpb_round_border="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pro_holder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/captain"
+                android:text="Jetpack joyride"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Play this game for\n atleast 2 minute(s) to claim your reward"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/play"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/disc"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/play_btn_2"
+                android:gravity="center"
+                android:paddingLeft="62dp">
+
+                <ImageView
+                    android:id="@+id/img_time"
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/img_time"
+                    android:fontFamily="@font/bold"
+                    android:text="Continue Playing"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/minuts"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/captain"
+                    android:text="0 min"
+                    android:textColor="@color/white"
+                    android:textSize="23sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/claim"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/play"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/play_btn_1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="Claim Your Reward"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/claim_coin_shap"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/rupee" />
+
+                        <TextView
+                            android:id="@+id/coins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7sp"
+                            android:fontFamily="@font/bold"
+                            android:text="0"
+                            android:textColor="#DE5342"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:progress="70"
+            android:progressDrawable="@drawable/hori_progress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/progressBar"
+            android:layout_marginHorizontal="35dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="You can earn maximum 30 coins by playing this game."
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/loading"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"/>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="#FAFAFA"
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arrow_back"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="Insufficient Playtime"
+            android:textColor="#192CA3"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/midle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:paddingHorizontal="40dp"
+            android:text="You need to Play for a little more time to Earn Coins from, this session!"
+            android:textAlignment="center"
+            android:textColor="#192CA3"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/midle"
+            android:layout_marginTop="50dp"
+            android:paddingHorizontal="13dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Continue Playing"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/close"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="#E94335"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Close Game"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="#FAFAFA"
+        android:visibility="gone"
+        android:id="@+id/claim_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/top2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="236dp"
+            android:background="@drawable/game_title"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Reward"
+            android:textColor="#192CA3"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/sec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top2"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="40dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:fontFamily="@font/regular"
+                android:text="Time Spent"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:fontFamily="@font/regular"
+                android:gravity="right"
+                android:text="3 minute(s)"
+                android:textColor="@color/Gamezone"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sec"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="40dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:fontFamily="@font/regular"
+                android:text="Reward"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:fontFamily="@font/regular"
+                android:gravity="right"
+                android:text="6 Coins"
+                android:textColor="@color/Gamezone"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="13dp"
+            android:paddingHorizontal="13dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="#E94335"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Collect Coins"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/play2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Continue Playing"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="#FAFAFA"
+        android:visibility="gone"
+        android:id="@+id/warn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/game_title"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/Gamezone"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_marginTop="13dp"
+            android:paddingHorizontal="13dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/close3"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="#E94335"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Close"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/play3"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="Play"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

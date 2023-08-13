@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/play"
+        android:icon="@drawable/home"
+        android:title="Home"
+        android:enabled="true"
+        app:cnb_iconColor="#D1C7F4"
+        android:checked="true"/>
+    <item
+        android:id="@+id/battle"
+        android:icon="@drawable/list"
+        android:title="Leaderboard"
+        app:cnb_iconColor="#D1C7F4" />
+    <item
+        android:id="@+id/tournament"
+        android:icon="@drawable/ref"
+        android:title="Refer"
+        app:cnb_iconColor="#D1C7F4" />
+    <item
+        android:id="@+id/Rewards"
+        android:icon="@drawable/reward"
+        android:title="Rewards"
+        app:cnb_iconColor="#D1C7F4" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"
+        app:cnb_iconColor="#D1C7F4" />
+</menu>

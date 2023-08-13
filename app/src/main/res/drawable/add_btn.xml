@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="#1195A5A6" />
+
+
+    <!-- we define corner radius, note that radius can be different for each corner -->
+    <corners android:radius="35dp" />
+
+</shape>

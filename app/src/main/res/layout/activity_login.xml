@@ -1,0 +1,370 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            style="@style/viewParent.headerText.NoMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_50dp"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="22dp"
+            android:text="Sign up &amp; Get ₹10 Bonus cash"
+            android:textColor="@color/mtxtcolor"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/viewParent.headerText.NoMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="22dp"
+            android:text="Login using Mobile Number"
+            android:textColor="#220044"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:background="@drawable/txt_back"
+                android:drawableLeft="@drawable/android"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:padding="12dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginRight="21dp"
+            android:background="@drawable/login_btn"
+            android:fontFamily="@font/regular"
+            android:text="Get OTP and Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="By continuing i hareby confirm i am 18 years of age and i'm not playing from Assam, Nagaland, Orissa, Sikkim, Telangana and Andhra Pradesh and i agree to the"
+
+            android:textColor="#C0B7C8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textColor="#220044"
+            android:textColorHighlight="@color/black"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/nativeAds1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/native_height" />
+
+            <LinearLayout
+                android:id="@+id/consLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/bot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_25dp"
+                        android:layout_marginEnd="@dimen/dimen_25dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="@dimen/dimen_60dp"
+                                android:layout_height="@dimen/dimen_60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dimen_20dp"
+                                android:src="@drawable/ic_launcher_app" />
+
+                            <TextView
+                                android:id="@+id/welcome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/image"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5sp"
+                                android:text="@string/welcome_back"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/email_lyt"
+                                style="@style/LoginTextInputLayoutStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/welcome"
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:layout_marginBottom="4dp"
+                                app:counterTextColor="@color/colorPrimary">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/email_edit_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/enter_email"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/pass_lyt"
+                                style="@style/LoginTextInputLayoutStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/email_lyt"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                app:passwordToggleEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/password_edit_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/password"
+                                    android:inputType="textPassword"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/forgot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_below="@+id/pass_lyt">
+
+                                <CheckBox
+                                    android:text="Remember me"
+                                    android:textSize="12sp"
+                                    android:layout_width="wrap_content"
+                                    android:checked="true"
+                                    android:layout_height="@dimen/dimen_20dp"/>
+
+                                <TextView
+                                    android:id="@+id/forgotPassword"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/forgot_password"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/c1"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/login_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/forgot"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                android:background="@drawable/wallet_back_res"
+                                android:text="@string/login"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sign_up_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/login_btn"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dimen_20dp"
+                                android:layout_marginBottom="30dp"
+                                android:text="@string/didNotSign_up1"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/adView_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main"
+                    app:layout_constraintBottom_toTopOf="@+id/lgoinUsing"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/lgoinUsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Or login using"
+                    android:paddingHorizontal="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/bot"
+                    app:layout_constraintTop_toBottomOf="@+id/adView_top"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/yellow_600"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/bot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintTop_toBottomOf="@+id/main"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lin"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:linksClickable="true"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/l1"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:paddingHorizontal="19dp"
+                            android:src="@drawable/fb_login_btn" />
+
+                        <ImageView
+                            android:id="@+id/l2"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:paddingHorizontal="19dp"
+                            android:src="@drawable/g_login_btn" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/nativeAds2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/native_height"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

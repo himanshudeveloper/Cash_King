@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".csm.fragment.FragmentRefer"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refer a friend"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bold"
+            android:textSize="23sp"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You both will get 100 coins"
+            android:textColor="#88EFEFEF"
+            android:fontFamily="@font/bold"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/i_btn"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="How it works"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bold"/>
+
+        </LinearLayout>
+
+     <RelativeLayout
+         android:layout_marginTop="20dp"
+         android:paddingLeft="10dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <RelativeLayout
+             android:id="@+id/r_3"
+             android:layout_width="70dp"
+             android:layout_height="202dp">
+
+             <LinearLayout
+                 android:layout_width="10dp"
+                 android:layout_height="160dp"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginVertical="25dp"
+                 android:layout_marginLeft="15dp"
+                 android:background="@drawable/dotted_vurti" />
+
+             <LinearLayout
+                 android:id="@+id/lin_1"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:layout_centerHorizontal="true"
+                 android:background="@drawable/ovel">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:fontFamily="@font/bold"
+                     android:gravity="center"
+                     android:text="1"
+                     android:textColor="@color/colorPrimary"
+                     android:textSize="25sp" />
+             </LinearLayout>
+
+             <LinearLayout
+                 android:id="@+id/lin_2"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:layout_below="@id/lin_1"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="27dp"
+                 android:background="@drawable/ovel">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:fontFamily="@font/bold"
+                     android:gravity="center"
+                     android:text="2"
+                     android:textColor="@color/colorPrimary"
+                     android:textSize="25sp" />
+             </LinearLayout>
+
+             <LinearLayout
+                 android:id="@+id/lin_3"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:layout_below="@id/lin_2"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="27dp"
+                 android:background="@drawable/ovel">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:fontFamily="@font/bold"
+                     android:gravity="center"
+                     android:text="3"
+                     android:textColor="@color/colorPrimary"
+                     android:textSize="25sp" />
+             </LinearLayout>
+         </RelativeLayout>
+
+         <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="193dp"
+             android:layout_toEndOf="@+id/r_3" >
+
+             <LinearLayout
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="3">
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Invite your friends"
+                     android:textColor="@color/white"
+                     android:textSize="18sp"
+                     android:fontFamily="@font/bold"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Just share app link"
+                     android:textColor="@color/gray_light"
+                     android:textSize="13sp"
+                     android:fontFamily="@font/bold"/>
+             </LinearLayout>
+             <LinearLayout
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="3">
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Referral code"
+                     android:textColor="@color/white"
+                     android:textSize="18sp"
+                     android:fontFamily="@font/bold"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="They signup with your referral code"
+                     android:textColor="@color/gray_light"
+                     android:textSize="13sp"
+                     android:fontFamily="@font/bold"/>
+             </LinearLayout>
+             <LinearLayout
+                 android:paddingTop="12dp"
+                 android:gravity="center"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="3">
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="You will earn free coins !"
+                     android:textColor="@color/white"
+                     android:textSize="18sp"
+                     android:fontFamily="@font/bold"/>
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="You both will get 200 coins"
+                     android:textColor="@color/gray_light"
+                     android:textSize="13sp"
+                     android:fontFamily="@font/bold"/>
+             </LinearLayout>
+
+
+         </LinearLayout>
+     </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/copy"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/copy_r_back"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ref"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:paddingLeft="40dp"
+                android:text="GDS587VS"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/green_grad"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="copy"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/send"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/pending_task"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:padding="3dp"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_share"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Refer friends now"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Earn more from referral achievement"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="7dp"
+            android:textSize="15dp"/>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/loading"
+                app:shimmer_auto_start="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@color/colorPrimaryDark">
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                app:cardCornerRadius="9dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="11dp"
+                                android:background="@color/white"
+                                android:gravity="center">
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/task_num1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="1dp"
+                            app:cardCornerRadius="50dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/task_num1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/bold"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="15dp"
+                                android:background="@color/white">
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="100dp"
+                                android:background="@color/white" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@color/colorPrimaryDark">
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                app:cardCornerRadius="9dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="11dp"
+                                android:background="@color/white"
+                                android:gravity="center">
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/task_num2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="1dp"
+                            app:cardCornerRadius="50dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/task_num2"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/bold"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="15dp"
+                                android:background="@color/white">
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="100dp"
+                                android:background="@color/white" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@color/colorPrimaryDark">
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                app:cardCornerRadius="9dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="11dp"
+                                android:background="@color/white"
+                                android:gravity="center"></LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/task_num"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="1dp"
+                            app:cardCornerRadius="50dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/task_num"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="15dp"
+                                android:layout_marginBottom="2dp"
+                                android:background="@color/white"
+                                android:fontFamily="@font/bold"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="15dp"
+                                android:background="@color/white">
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="100dp"
+                                android:background="@color/white" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="9dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+    </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_list"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+
+                        android:id="@+id/task_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:id="@+id/show"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/pending_task"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textAllCaps="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:text="Show more"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

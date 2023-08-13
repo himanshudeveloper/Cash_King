@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BE000000"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".csm.topsheet.Coins_Dialog">
+
+    <RelativeLayout
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/coins_dilog_back">
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/dialog"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/troffy_shap"
+        android:layout_marginBottom="-80dp">
+
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/trophy"
+            android:padding="30dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations !"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/top"
+        android:textSize="27sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/captain"/>
+
+    <LinearLayout
+        android:id="@+id/coi"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/txt_2"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/rupee" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/black"
+            android:paddingLeft="7dp"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/bold"
+        android:text="You got 100 coins"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/pending_task"
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/coi"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/black"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

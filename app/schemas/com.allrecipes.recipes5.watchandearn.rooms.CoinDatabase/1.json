@@ -1,0 +1,48 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d24a67ea046a7fd658c3ec668c8c89f0",
+    "entities": [
+      {
+        "tableName": "Coins",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coinId` INTEGER NOT NULL, `id` TEXT DEFAULT 'scratch', `coin` INTEGER NOT NULL DEFAULT 100, PRIMARY KEY(`coinId`))",
+        "fields": [
+          {
+            "fieldPath": "coinId",
+            "columnName": "coinId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": false,
+            "defaultValue": "'scratch'"
+          },
+          {
+            "fieldPath": "coin",
+            "columnName": "coin",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "100"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "coinId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd24a67ea046a7fd658c3ec668c8c89f0')"
+    ]
+  }
+}
